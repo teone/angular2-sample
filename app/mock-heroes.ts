@@ -1,4 +1,4 @@
-import {Hero} from './hero'
+import {Hero} from './interfaces/hero'
 
 export const HEROES:Hero[] = [
   {id: 1, name: 'Mr. Nice'},

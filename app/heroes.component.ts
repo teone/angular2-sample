@@ -1,8 +1,8 @@
 import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
-import {Hero} from './hero'
+import {Hero} from './interfaces/hero'
 import {HeroDetailComponent} from './hero-detail.component';
-import {HeroService} from './hero.service';
+import {HeroService} from './services/hero.service';
 
 @Component({
   selector: 'my-heroes',
