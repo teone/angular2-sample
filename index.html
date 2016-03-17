@@ -28,7 +28,10 @@
         }
       });
       System.import('app/main')
-            .then(null, console.error.bind(console));
+      .then(null, function(err){
+        console.log('SystemJs error')
+        console.error(err)
+      });
     </script>
   </head>
 
