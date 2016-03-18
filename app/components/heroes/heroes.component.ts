@@ -1,27 +1,14 @@
 import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
-import {Hero} from './interfaces/hero'
-import {HeroDetailComponent} from './hero-detail.component';
-import {HeroService} from './services/hero.service';
+import {Hero} from './../../interfaces/hero'
+import {HeroDetailComponent} from './../hero-detail/hero-detail.component';
+import {HeroService} from './../../services/hero.service';
 
 @Component({
   selector: 'my-heroes',
   directives: [HeroDetailComponent],
-  template: `
-    <h2>My Heroes</h2>
-    <ul class="heroes">
-      <li *ngFor="#hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
-        <span class="badge">{{hero.id}}</span>{{hero.name}}
-      </li>
-    </ul>
-    <div *ngIf="selectedHero">
-      <h2>
-        {{selectedHero.name | uppercase}} is my hero
-      </h2>
-      <button (click)="gotoDetail()">View Details</button>
-    </div>
-    `,
-  styleUrls:[`./app/heroes.component.css`]
+  templateUrl: `./app/components/heroes/heroes.component.html`,
+  styleUrls:[`./app/components/heroes/heroes.component.css`]
 })
 export class HeroesComponent implements OnInit{
 
